@@ -10,7 +10,7 @@ const main = async () => {
 
   if ((network.config.chainId === 97 || network.config.chainId === 56) && process.env.BSCSCAN_API_KEY) {
     await rewards.deployTransaction.wait(10)
-    await verify(rewards.address, [initRewardsToken])
+    await verify(rewards.address, initRewardsToken)
   }
 
 }
