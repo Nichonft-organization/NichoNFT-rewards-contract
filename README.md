@@ -85,4 +85,8 @@ yarn scripts/sample-script.js
 npx hardhat help
 or
 yarn hardhat help
+
+#Tips
+#log: import "hardhat/console.sol";
+
 ```
