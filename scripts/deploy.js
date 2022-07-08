@@ -8,15 +8,14 @@ const main = async () => {
   await rewards.deployed();
   console.log("Rewards address:", rewards.address);
 
-  // if (network.config.chainId === 56 && process.env.BSCSCAN_API_KEY) {
-  //   await rewards.deployTransaction.wait(10)
-  //   await verify(rewards.address, [initRewardsToken])
-  // }
-
+  if (network.config.chainId === 56 && process.env.BSCSCAN_API_KEY) {
+    await rewards.deployTransaction.wait(10)
+    await verify(rewards.address, [initRewardsToken])
+  }
 }
 
 async function verify(contractAddress, args) {
-    console.log("Verifying contractAddress contract...")
+    console.log("Verifying contractAddress code...")
     try {
         await run("verify:verify", {
             address: contractAddress,
