@@ -4,6 +4,18 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 
 Try running some of the following tasks:
 
+```
+Testnet:
+
+StandardToken ERC20: 0xE36e88dad95EE1100638956dED986Cb77dDF1747
+
+NichoNFTRewards: 0x3f7eb753ac22A0BD174451e91E2d19f8ee4D2bB1
+
+https://testnet.bscscan.com/address/0x3f7eb753ac22A0BD174451e91E2d19f8ee4D2bB1#code
+
+```
+
+
 ```shell
 step 1: 
 #Install hardhat environment
