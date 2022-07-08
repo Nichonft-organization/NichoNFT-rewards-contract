@@ -60,7 +60,10 @@ yarn hardhat test --grep grantRole
 npx hardhat verify 0xfE2b69c6cAa56D04D6e3B505D0d5865948f53b17 --contract contracts/NichoNFTRewards.sol:NichoNFTRewards  --network bsc_testnet "0xE36e88dad95EE1100638956dED986Cb77dDF1747"
 or
 npx hardhat verify 0xfE2b69c6cAa56D04D6e3B505D0d5865948f53b17 --network bsc_testnet "0xE36e88dad95EE1100638956dED986Cb77dDF1747"
-
+or
+#npx hardhat clean
+#Multiple constructor parameter
+npx hardhat verify 0xfE2b69c6cAa56D04D6e3B505D0d5865948f53b17 --network bsc_testnet "0xE36e88dad95EE1100638956dED986Cb77dDF1747" "0xE36e88dad95EE1100638956dED986Cb77dDF1747" "0xE36e88dad95EE1100638956dED986Cb77dDF1747"
 
 Other related commands
 #List Account

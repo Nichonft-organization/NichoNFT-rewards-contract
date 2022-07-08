@@ -12,6 +12,12 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   }
 });
 
+// set proxy
+const { ProxyAgent, setGlobalDispatcher } = require("undici");
+// change to yours
+const proxyAgent = new ProxyAgent('http://127.0.0.1:10809'); 
+setGlobalDispatcher(proxyAgent);
+
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 

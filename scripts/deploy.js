@@ -9,8 +9,8 @@ const main = async () => {
   console.log("Rewards address:", rewards.address);
 
   if ((network.config.chainId === 97 || network.config.chainId === 56) && process.env.BSCSCAN_API_KEY) {
-    await rewards.deployTransaction.wait(10)
-    await verify(rewards.address, initRewardsToken)
+    await rewards.deployTransaction.wait(5)
+    await verify(rewards.address, [initRewardsToken])
   }
 
 }
@@ -20,7 +20,7 @@ async function verify(contractAddress, args) {
     try {
         await run("verify:verify", {
             address: contractAddress,
-            constructorArguements: args,
+            constructorArguments: args,
         })
     } catch (e) {
         if (e.message.toLowerCase().includes("already verified!")) {
