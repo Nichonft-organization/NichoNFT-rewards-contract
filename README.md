@@ -40,7 +40,7 @@ or
 yarn hardhat node
 
 step 6:
-#Deploded contract to local hardhat node
+#Deployed contract to local hardhat node
 #localhost
 npx hardhat run scripts/deploy.js --network bsc_testnet
 #test_net
