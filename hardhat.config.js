@@ -28,11 +28,13 @@ const OWNER_ADDRESS_PRIVATE_KEY = process.env.OWNER_ADDRESS_PRIVATE_KEY
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: "0.8.4",
-  settings: {
-    optimizer: {
-      enabled: true,
-      runs: 200,
+  solidity: {
+    version: "0.8.4",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
     },
   },
   etherscan: {
