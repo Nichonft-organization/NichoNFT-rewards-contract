@@ -38,6 +38,10 @@ contract NichoNFTRewards is Ownable, AccessControl {
         return userRewards[user].amount;
     }
 
+    function getUserRewardsItems(address user) public view returns (RewardItems memory) {
+        return userRewards[user];
+    }
+
     function getRewardsAmount(address _rewardsToken) public view returns (uint256) {
         return IERC20(_rewardsToken).balanceOf(address(this));
     }
